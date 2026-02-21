@@ -77,19 +77,43 @@
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>🧠 Parkinson's Disease Prediction</h1>
-        <p class="subtitle">ML-Powered Diagnostic Assistant</p>
-        
-        <div class="description">
-            <p>This application uses machine learning to assist in predicting Parkinson's Disease based on voice and biomedical measurements. Our model analyzes various clinical parameters to provide predictive insights.</p>
-        </div>
-        
-        <div class="btn-group">
-            <a href="/predict_api" class="btn-primary">Start Prediction</a>
-            <a href="/about" class="btn-secondary">Learn More</a>
-        </div>
-    </div>
+<div class="container">
+    <h1>Parkinson's Disease Prediction</h1>
+    <p class="subtitle">Input Patient Data</p>
+
+    <form action="/predict" method="post">
+        <input type="text" name="MDVP:Fo(Hz)" placeholder="MDVP:Fo(Hz)" required="required" /><br>
+        <input type="text" name="MDVP:Fhi(Hz)" placeholder="MDVP:Fhi(Hz)" required="required" /><br>
+        <input type="text" name="MDVP:Flo(Hz)" placeholder="MDVP:Flo(Hz)" required="required" /><br>
+        <input type="text" name="MDVP:Jitter(%)" placeholder="MDVP:Jitter(%)" required="required" /><br>
+        <input type="text" name="MDVP:Jitter(Abs)" placeholder="MDVP:Jitter(Abs)" required="required" /><br>
+        <input type="text" name="MDVP:RAP" placeholder="MDVP:RAP" required="required" /><br>
+        <input type="text" name="MDVP:PPQ" placeholder="MDVP:PPQ" required="required" /><br>
+        <input type="text" name="Jitter:DDP" placeholder="Jitter:DDP" required="required" /><br>
+        <input type="text" name="MDVP:Shimmer" placeholder="MDVP:Shimmer" required="required" /><br>
+        <input type="text" name="MDVP:Shimmer(dB)" placeholder="MDVP:Shimmer(dB)" required="required" /><br>
+        <input type="text" name="Shimmer:APQ3" placeholder="Shimmer:APQ3" required="required" /><br>
+        <input type="text" name="Shimmer:APQ5" placeholder="Shimmer:APQ5" required="required" /><br>
+        <input type="text" name="MDVP:APQ" placeholder="MDVP:APQ" required="required" /><br>
+        <input type="text" name="Shimmer:DDA" placeholder="Shimmer:DDA" required="required" /><br>
+        <input type="text" name="NHR" placeholder="NHR" required="required" /><br>
+        <input type="text" name="HNR" placeholder="HNR" required="required" /><br>
+        <input type="text" name="RPDE" placeholder="RPDE" required="required" /><br>
+        <input type="text" name="DFA" placeholder="DFA" required="required" /><br>
+        <input type="text" name="spread1" placeholder="spread1" required="required" /><br>
+        <input type="text" name="spread2" placeholder="spread2" required="required" /><br>
+        <input type="text" name="D2" placeholder="D2" required="required" /><br>
+        <input type="text" name="PPE" placeholder="PPE" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+
 </body>
-</html>
+<br>
+<br>
+<p class="prediction-text" style="font-size: 2em; color: #333;">{{prediction_text}}</p>
