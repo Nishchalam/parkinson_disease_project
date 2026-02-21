@@ -7,3 +7,4 @@ Data visulisation and data preprocessing is done
 
 install requirements, follow this command: pip install -r requirements.txt
 
+input test data can be seen in detection.ipynb file to see the usage of the app
