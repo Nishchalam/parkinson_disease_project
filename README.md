@@ -8,3 +8,7 @@ Data visulisation and data preprocessing is done
 install requirements, follow this command: pip install -r requirements.txt
 
 input test data can be seen in detection.ipynb file to see the usage of the app
+
+to run the app, clone the git repo and open terminal and run this comman: python app.py 
+
+The web application will be running at http://127.0.0.1:5000 
